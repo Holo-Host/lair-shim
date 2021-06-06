@@ -1,0 +1,39 @@
+{
+  "name": "lair-shim",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./dist/main.js",
+  "scripts": {
+    "start": "node ./src/index.js -t",
+    "clear": "mkdir -p ./shim && rm -rf ./shim/*",
+    "build": "webpack",
+    "lair": "lair-keystore -d ./keystore",
+    "lint": "standardx --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Holo-Host/lair-shim.git"
+  },
+  "author": "zo-el<joelulahanna@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.14.3",
+    "@holo-host/cryptolib": "^0.3.0",
+    "@holochain/conductor-api": "0.0.4",
+    "@holochain/lair-client": "^0.1.2",
+    "babel-loader": "^8.2.2",
+    "commander": "^6.2.0",
+    "net": "^1.0.2",
+    "tsc": "^2.0.3",
+    "typescript": "^4.3.2"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.4",
+    "bufferutil": "^4.0.1",
+    "nexe": "^4.0.0-beta.18",
+    "standardx": "^7.0.0",
+    "utf-8-validate": "^5.0.2",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^4.7.0"
+  }
+}
