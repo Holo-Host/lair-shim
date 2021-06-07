@@ -13,7 +13,7 @@ function main () {
   `)
     .requiredOption('-p, --path <path>', 'assigns path to run lair-shim')
     .requiredOption('-l, --lair_keystore_path <path>', 'path to running lair-keystore')
-    .option('-t, --test', 'Run lair-shim in test mode')
+    .option('-t, --test <delay_in_ms>', 'Run lair-shim in test mode and pass the delay you want the shim to respond to signing values')
 
     program.parse(process.argv);
 
@@ -26,7 +26,7 @@ function main () {
       console.log("Running Lair Shim in test mode...");
       init(LAIR_SOCKET, SHIM_PATH, () => {
         const delay = ms => new Promise(r => setTimeout(r, ms));
-        delay(15000)
+        delay(options.test)
         return null;
       });
     }
