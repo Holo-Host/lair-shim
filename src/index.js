@@ -25,6 +25,8 @@ function main () {
     if (options.test) {
       console.log("Running Lair Shim in test mode...");
       init(LAIR_SOCKET, SHIM_PATH, () => {
+        const delay = ms => new Promise(r => setTimeout(r, ms));
+        delay(15000)
         return null;
       });
     }
