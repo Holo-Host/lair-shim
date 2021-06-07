@@ -17,16 +17,13 @@
   "author": "zo-el<joelulahanna@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@babel/core": "^7.14.3",
     "@holo-host/cryptolib": "^0.3.0",
     "@holochain/conductor-api": "0.0.4",
     "@holochain/lair-client": "^0.1.2",
-    "babel-loader": "^8.2.2",
     "commander": "^6.2.0",
     "net": "^1.0.2"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.14.4",
     "bufferutil": "^4.0.1",
     "standardx": "^7.0.0",
     "utf-8-validate": "^5.0.2",
