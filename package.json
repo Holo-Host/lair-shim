@@ -4,7 +4,7 @@
   "description": "",
   "main": "./dist/main.js",
   "scripts": {
-    "start": "node ./src/index.js -p ../shim/socket -l ../keystore/socket -t 100",
+    "start": "npm run clear && node ./src/index.js -p ../shim/socket -l ../keystore/socket -t 100",
     "clear": "mkdir -p ./shim && rm -rf ./shim/*",
     "build": "webpack",
     "lair": "lair-keystore -d ./keystore",
