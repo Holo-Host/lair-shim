@@ -24,8 +24,10 @@ function main () {
 
     if (options.test) {
       console.log("Running Lair Shim in test mode...");
-      init(LAIR_SOCKET, SHIM_PATH, () => {
+      init(LAIR_SOCKET, SHIM_PATH, (pubKey, _) => {
         const delay = ms => new Promise(r => setTimeout(r, ms));
+        console.log(`Signing request by ${pubKey}` );
+        console.error(`delay signing request by ${options.test}ms` );
         delay(options.test)
         return null;
       });
